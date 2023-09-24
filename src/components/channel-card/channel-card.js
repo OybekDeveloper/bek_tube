@@ -4,6 +4,7 @@ import { CheckCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const ChannelCard = ({ video, marginTop }) => {
+    console.log(video)
   return (
     <Box
       sx={{

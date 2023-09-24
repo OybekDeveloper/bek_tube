@@ -12,17 +12,27 @@ const Category = ({ selectedCategoryHandler, selectedCategory }) => {
           key={item.name}
           style={{
             borderRadius: "0",
-              backgroundColor:item.name===selectedCategory && colors.icon,
-            color: item.name === selectedCategory ? '#fff':colors.icon,
+            backgroundColor: item.name === selectedCategory && colors.icon,
+            color: item.name === selectedCategory ? "#fff" : colors.icon,
           }}
           onClick={() => selectedCategoryHandler(item.name)}
         >
           <span
-            style={{color: item.name === selectedCategory ? '#fff':colors.icon, marginRight: "15px", opacity: "1" }}
+            style={{
+              color: item.name === selectedCategory ? "#fff" : colors.icon,
+              marginRight: "15px",
+              opacity: "1",
+            }}
           >
             {item.icon}
           </span>
-          <span style={{ color: item.name === selectedCategory ? '#fff':colors.icon }}>{item.name}</span>
+          <span
+            style={{
+              color: item.name === selectedCategory ? "#fff" : colors.icon,
+            }}
+          >
+            {item.name}
+          </span>
         </button>
       ))}
     </Stack>

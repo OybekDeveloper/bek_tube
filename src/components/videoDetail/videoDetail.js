@@ -4,6 +4,8 @@ import { ApiService } from "../../service/api.service";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
 import ReactPlayer from "react-player";
 import { Loader, Videos } from "../index";
+import renderHTML from 'react-render-html';
+
 import {
   CheckCircle,
   FavoriteOutlined,
@@ -74,11 +76,11 @@ const VideoDetail = () => {
           <Typography variant={"h5"} fontWeight={"bold"} p={2}>
             {title}
           </Typography>
-          <Typography variant={"subtitle2"} p={2} sx={{ opacity: "0.7" }}>
+          <Typography variant={"subtitle2"} p={2} sx={{ opacity: "0.7" ,width:'90%'}} >
             {description}
           </Typography>
           <Stack
-            direction={"row"}
+            direction={{xs:'column',md:'row'}}
             gap={"20px"}
             alignItems={"center"}
             py={1}

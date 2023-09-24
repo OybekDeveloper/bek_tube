@@ -17,8 +17,7 @@ const Search = () => {
                 console.log(error)
             }
         }
-        console.log(videos, ' hhhe  fadf')
-        
+
         getData();
     }, [id, videos]);
     return (

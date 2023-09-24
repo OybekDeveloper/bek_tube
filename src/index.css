@@ -65,3 +65,8 @@ a{
         height: 45vh!important;
     }
 }
+@media screen and (max-width: 400px){
+    .search-bar{
+        width: 100px;
+    }
+}

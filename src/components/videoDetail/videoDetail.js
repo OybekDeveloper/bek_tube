@@ -4,7 +4,6 @@ import { ApiService } from "../../service/api.service";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
 import ReactPlayer from "react-player";
 import { Loader, Videos } from "../index";
-import renderHTML from 'react-render-html';
 
 import {
   CheckCircle,
@@ -82,7 +81,8 @@ const VideoDetail = () => {
           <Stack
             direction={{xs:'column',md:'row'}}
             gap={"20px"}
-            alignItems={"center"}
+            alignItems={{xs:'start',md:'center'}}
+            justifyContent={{xs:'start',md:'center'}}
             py={1}
             px={2}
           >

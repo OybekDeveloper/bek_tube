@@ -3,22 +3,26 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-const ChannelCard = ({ video,marginTop }) => {
+const ChannelCard = ({ video, marginTop }) => {
   return (
     <Box
       sx={{
-          boxShadow: 'none',
-          borderRadius: '20px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: { xs: '356px', md: '320px' },
-          height: '326px',
-          margin: 'auto',
-          marginTop: marginTop,
+        boxShadow: "none",
+        borderRadius: "20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: { xs: "100%", sm: "500px", lg: "345px" },
+        height: "326px",
+        margin: "auto",
+        marginTop: marginTop,
       }}
     >
-    <Link to={`/channel/${video?.id.channelId ? video?.id?.channelId : video?.id}`}>
+      <Link
+        to={`/channel/${
+          video?.id.channelId ? video?.id?.channelId : video?.id
+        }`}
+      >
         <CardContent
           sx={{
             display: "flex",
@@ -42,13 +46,18 @@ const ChannelCard = ({ video,marginTop }) => {
             {video?.snippet?.title}{" "}
             <CheckCircle sx={{ fontSize: "14px", color: "gray", ml: "5px" }} />
           </Typography>
-            {video?.statistics?.subscriberCount && (
-                <Typography sx={{ fontSize: '15px', fontWeight: 500, color: 'gray' }}>
-                    {parseInt(video?.statistics?.subscriberCount).toLocaleString('en-US')} Subscribers
-                </Typography>
-            )}
+          {video?.statistics?.subscriberCount && (
+            <Typography
+              sx={{ fontSize: "15px", fontWeight: 500, color: "gray" }}
+            >
+              {parseInt(video?.statistics?.subscriberCount).toLocaleString(
+                "en-US",
+              )}{" "}
+              Subscribers
+            </Typography>
+          )}
         </CardContent>
-    </Link>
+      </Link>
     </Box>
   );
 };
